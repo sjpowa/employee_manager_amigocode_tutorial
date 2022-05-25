@@ -1,0 +1,19 @@
+This project is made following a tutorial of an amigoscode youtube video.
+Link of the project video: https://www.youtube.com/watch?v=Gx4iBLKLVHk
+
+===============================================================================
+
+I just need to add that i developed this using Angular 13 and SpringBoot 2.6.1 and there is some considerations, like:
+1.- on the onOpenModal method you need to specify that the employee parameter is optional and that means
+	that you have to put it as the second parameter with the ? in the name of the parameter.
+2.- the subscribe method now needs to specify "next" and "error" objects
+	(just add {} inside the parameters of the subscribe method and replace
+		"(response: " for "next: (response:", the same with the error handling, replace "(error: " with "error: (error: ".
+3.- The attributes in the components needs initialization, so employees needs to be initialized with "[ ]",
+	editEmployee and deleteEmployee with " Employee | undefined".
+4.- I needed to specify that the id of the employee to delete can't be null,
+	so i replaced "deleteEmployee?.id" with "deleteEmployee!.id".
+5.- This is because i found it is more perfoming, to evaluate the "mode" on onOpenModal method,
+	i did it with "else if" instead of only "if" (there's only one action to execute with the "mode" sent).
+	
+	===============================================================================
