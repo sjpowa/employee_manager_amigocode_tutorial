@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +19,7 @@ import sjpowa.group.employeemanager.service.EmployeeService;
 
 // This class will represent our controller
 // so we use the @RestController Annotation
+//@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/employee") // I want to give to this class a default URL
 							 // so all employee resource will have /employee
